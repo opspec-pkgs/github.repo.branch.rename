@@ -1,0 +1,42 @@
+name: github.com/opspec-pkgs/github.repo.branch.rename
+description: renames a branch of a github repo
+inputs:
+  accessToken:
+    string:
+      constraints: { minLength: 1 }
+      description: access token to authenticate with; see https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+      isSecret: true
+  ownerName:
+    string:
+      constraints: { minLength: 1 }
+      description: name of owner (user or org)
+  repoName:
+    string:
+      constraints: { minLength: 1 }
+      description: name of repo
+  oldName:
+    string:
+      constraints: { minLength: 1 }
+      default: master
+      description: old name of branch
+  newName:
+    string:
+      constraints: { minLength: 1 }
+      default: main
+      description: new name of branch
+version: 1.0.0
+run:
+  container:
+    image: { ref: 'ghcr.io/opspec-pkgs/github.repo.branch.rename:1.0.0' }
+    cmd: [ /cmd.sh ]
+    envVars:
+      accessToken:
+      newName:
+      oldName:
+      ownerName:
+      repoName:
+    files:
+      /cmd.sh:
+      /body:
+        new_name: $(newName)
+
