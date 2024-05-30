@@ -1,4 +1,5 @@
-[![Build Status](https://github.com/opspec-pkgs/github.repo.branch.rename/workflows/build/badge.svg?branch=main)](https://github.com/opspec-pkgs/github.repo.branch.rename/actions?query=workflow%3Abuild+branch%3Amain)
+[![build](https://github.com/opspec-pkgs/github.repo.branch.rename/actions/workflows/build.yml/badge.svg)](https://github.com/opspec-pkgs/github.repo.branch.rename/actions/workflows/build.yml)
+
 
 <img src="icon.svg" alt="icon" height="100px">
 
